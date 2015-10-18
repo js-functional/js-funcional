@@ -34,6 +34,16 @@ let studentsByName = students.map(byName);
 console.log(studentsByName);
 // [ 'Anna', 'John', 'Maria' ]
 
+// Chaining
+console.log(students.filter(isApproved).map(byName));
+
+// Reduce
+let totalGrades = students.reduce((sum, student) => {
+  return sum + student.grade;
+}, 0);
+console.log(totalGrades);
+
+
 // Currying
 let currySum =
   x =>

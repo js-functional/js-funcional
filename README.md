@@ -37,6 +37,7 @@ students.filter(isApproved);
 ```
 
 3) Map
+
 ```javascript
 let byName = (obj) => {
     return obj.name;
@@ -44,6 +45,38 @@ let byName = (obj) => {
 
 students.map(byName);
 // [ 'Anna', 'John', 'Maria' ]
+```
+
+4) Chaining
+
+```javascript
+let students = [
+  {name: 'Anna', grade: 6},
+  {name: 'John', grade: 4},
+  {name: 'Maria', grade: 9}
+];
+
+let isApproved = (student) => {
+    return student.grade >= 6;
+}
+
+let byName = (obj) => {
+    return obj.name;
+}
+
+students.filter(isApproved).map(byName));
+// ['Anna', 'Maria']
+```
+
+5) Reduce
+
+```javascript
+let totalGrades = students.reduce((sum, student) => {
+  return sum + student.grade;
+}, 0);
+
+totalGrades
+// 19
 ```
 
 ### Recursion
