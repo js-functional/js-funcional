@@ -1,0 +1,19 @@
+{
+  "name": "js-funcional",
+  "version": "1.0.0",
+  "description": "Exemplos de JavaScript funcional (com ES6)",
+  "main": "examples.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Funcional",
+    "JavaScript",
+    "ES6"
+  ],
+  "author": "Matheus Lima",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.23"
+  }
+}
