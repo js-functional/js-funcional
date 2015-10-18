@@ -35,6 +35,15 @@ console.log(studentsByName);
 // [ 'Anna', 'John', 'Maria' ]
 
 // Currying
+let currySum =
+  x =>
+    y =>
+      x + y;
+
+let addFive = currySum(5);
+let adding = addFive(10);
+console.log(adding); // 15
+
 let student =
   name =>
     grade =>
@@ -60,3 +69,13 @@ let counting = countdown(5);
 2
 1
 */
+
+let factorial = (num) => {
+  if (num <= 0) {
+    return 1;
+  } else {
+    return (num * factorial(num - 1));
+  }
+};
+console.log(factorial(5));
+//120
