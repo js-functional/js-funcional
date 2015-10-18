@@ -1,3 +1,4 @@
+// Sum
 let sum = (x, y) => {
   return x + y;
 }
@@ -9,6 +10,7 @@ let calculate = (fn, x, y) => {
 let calc = calculate(sum, 1, 2);
 console.log(calc); // 3
 
+// Filter
 let students = [
   {name: 'Anna', grade: 6},
   {name: 'John', grade: 4},
@@ -20,15 +22,19 @@ let isApproved = (student) => {
 }
 
 let approvedStudents = students.filter(isApproved);
-console.log(approvedStudents); // [ { name: 'Anna', grade: 6 }, { name: 'Maria', grade: 9 } ]
+console.log(approvedStudents);
+// [ { name: 'Anna', grade: 6 }, { name: 'Maria', grade: 9 } ]
 
-let studentByName = (student) => {
-    return student.name;
+// Map
+let byName = (obj) => {
+    return obj.name;
 }
 
-let studentsByName = students.map(studentByName);
-console.log(studentsByName); // [ 'Anna', 'John', 'Maria' ]
+let studentsByName = students.map(byName);
+console.log(studentsByName);
+// [ 'Anna', 'John', 'Maria' ]
 
+// Currying
 let student =
   name =>
     grade =>
@@ -37,6 +43,8 @@ let student =
 let myStudent = student("Matt")(8);
 console.log(myStudent); // Name: Matt | Grade: 8
 
+
+// Recursion
 let countdown = (num) => {
   if (num > 0) {
     console.log(num);
