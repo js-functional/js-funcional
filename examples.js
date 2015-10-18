@@ -1,50 +1,50 @@
-let soma = (x, y) => {
+let sum = (x, y) => {
   return x + y;
 }
 
-let calcula = (fn, x, y) => {
+let calculate = (fn, x, y) => {
   return fn(x, y);
 }
 
-let calculo = calcula(soma, 1, 2);
-console.log(calculo); // 3
+let calc = calculate(sum, 1, 2);
+console.log(calc); // 3
 
-let alunos = [
-  {nome: 'Ana', nota: 6},
-  {nome: 'Julio', nota: 4},
-  {nome: 'Maria', nota: 9}
+let students = [
+  {name: 'Anna', grade: 6},
+  {name: 'John', grade: 4},
+  {name: 'Maria', grade: 9}
 ];
 
-let estaAprovado = (aluno) => {
-    return aluno.nota >= 6;
+let isApproved = (student) => {
+    return student.grade >= 6;
 }
 
-let alunosAprovados = alunos.filter(estaAprovado);
-console.log(alunosAprovados); // [ { nome: 'Ana', nota: 6 }, { nome: 'Maria', nota: 9 } ]
+let approvedStudents = students.filter(isApproved);
+console.log(approvedStudents); // [ { name: 'Anna', grade: 6 }, { name: 'Maria', grade: 9 } ]
 
-let alunoPeloNome = (aluno) => {
-    return aluno.nome;
+let studentByName = (student) => {
+    return student.name;
 }
 
-let nomeAlunos = alunos.map(alunoPeloNome);
-console.log(nomeAlunos); // [ 'Ana', 'Julio', 'Maria' ]
+let studentsByName = students.map(studentByName);
+console.log(studentsByName); // [ 'Anna', 'John', 'Maria' ]
 
-let aluno =
-  nome =>
-    nota =>
-      `Nome: ${nome} | Nota: ${nota}`;
+let student =
+  name =>
+    grade =>
+      `Name: ${name} | Grade: ${grade}`;
 
-let meuAluno = aluno("Matheus")(8);
-console.log(meuAluno); // Nome: Matheus | Nota: 8
+let myStudent = student("Matt")(8);
+console.log(myStudent); // Name: Matt | Grade: 8
 
-let contagemRegressiva = (num) => {
+let countdown = (num) => {
   if (num > 0) {
     console.log(num);
-    contagemRegressiva(num - 1);
+    countdown(num - 1);
   }
 }
 
-let contagem = contagemRegressiva(5);
+let counting = countdown(5);
 /*
 5
 4

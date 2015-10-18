@@ -1,13 +1,14 @@
 {
-  "name": "js-funcional",
+  "name": "js-functional",
   "version": "1.0.0",
-  "description": "Exemplos de JavaScript funcional (com ES6)",
+  "description": "JavaScript Functional Programming Cookbook (ES6)",
   "main": "examples.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "Funcional",
+    "Functional",
+    "Cookbook",
     "JavaScript",
     "ES6"
   ],

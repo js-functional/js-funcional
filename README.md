@@ -1,1 +1,1 @@
-## Cookbook de Programação Funcional em JavaScript (ES6)
+# JavaScript Functional Programming Cookbook (ES6)
