@@ -62,6 +62,26 @@ let student =
 let myStudent = student("Matt")(8);
 console.log(myStudent); // Name: Matt | Grade: 8
 
+// Destructuring
+let foo = () => {
+  return [1, 2, 3];
+};
+
+let [a, b] = foo();
+console.log(a, b); // 1 2
+
+let [x, ...y] = [1, 2, 3];
+console.log(x, y); // 1 [2, 3]
+
+let ajax = function ({ url = "localhost", port: p = 80}, ...data) {
+  console.log("Url:", url, "Port:", p, "Rest:", data);
+};
+
+ajax({ url: "someHost" }, "additional", "data", "hello");
+// Url: someHost Port: 80 Rest: [ 'additional', 'data', 'hello' ]
+
+ajax({ }, "additional", "data", "hello");
+// Url: localhost Port: 80 Rest: [ 'additional', 'data', 'hello' ]
 
 // Recursion
 let countdown = (num) => {

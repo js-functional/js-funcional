@@ -117,6 +117,43 @@ factorial(5);
 //120
 ```
 
+### Destructuring
+Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or "Pattern Matching"
+
+1) Select from pattern
+
+```javascript
+let foo = () => {
+  return [1, 2, 3];
+};
+
+let [a, b] = foo();
+console.log(a, b);
+// 1 2
+```
+
+2) Accumulates the rest values
+
+```javascript
+let [a, ...b] = [1, 2, 3];
+console.log(a, b);
+// 1 [2, 3]
+```
+
+3) Optional parameters
+
+```javascript
+let ajax = function ({ url = "localhost", port: p = 80}, ...data) {
+  console.log("Url:", url, "Port:", p, "Rest:", data);
+};
+
+ajax({ url: "someHost" }, "additional", "data", "hello");
+// Url: someHost Port: 80 Rest: [ 'additional', 'data', 'hello' ]
+
+ajax({ }, "additional", "data", "hello");
+// Url: localhost Port: 80 Rest: [ 'additional', 'data', 'hello' ]
+```
+
 ### Currying
 Taking a function that takes multiple arguments and turning it into a chain of functions each taking one argument and returning the next function, until the last returns the result
 
