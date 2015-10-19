@@ -183,8 +183,8 @@ addFive(10);
 ```
 
 ### Sources
-[https://gist.github.com/mikaelbr/9900818]()
+[https://gist.github.com/mikaelbr/9900818](https://gist.github.com/mikaelbr/9900818)
 
-[https://www.gitbook.com/book/jcouyang/functional-javascript/details]()
+[https://www.gitbook.com/book/jcouyang/functional-javascript/details](https://www.gitbook.com/book/jcouyang/functional-javascript/details)
 
-[https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84]()
+[https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
