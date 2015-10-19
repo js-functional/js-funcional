@@ -181,3 +181,10 @@ let addFive = currySum(5);
 addFive(10);
 // 15
 ```
+
+### Sources
+[https://gist.github.com/mikaelbr/9900818]()
+
+[https://www.gitbook.com/book/jcouyang/functional-javascript/details]()
+
+[https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84]()
