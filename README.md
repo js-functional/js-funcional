@@ -117,6 +117,21 @@ factorial(5);
 //120
 ```
 
+### Functor
+Given a value and a function, unwraps the values to get to its inner value(s), calls the given function with the inner value(s), wraps the returned values in a new structure, and returns the new structure.
+
+1) Adding a value to all the elements in a array
+
+```javascript
+let plus1 = (num) => {
+    return num + 1;
+}
+
+let numbers = [1, 2, 3];
+numbers.map(plus1);
+// [2, 3, 4]
+```
+
 ### Destructuring
 Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or "Pattern Matching"
 
@@ -188,3 +203,5 @@ addFive(10);
 [https://www.gitbook.com/book/jcouyang/functional-javascript/details]()
 
 [https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84]()
+
+[http://functionaljavascript.blogspot.com.br/2013/07/functors.html](http://functionaljavascript.blogspot.com.br/2013/07/functors.html)

@@ -43,7 +43,6 @@ let totalGrades = students.reduce((sum, student) => {
 }, 0);
 console.log(totalGrades);
 
-
 // Currying
 let currySum =
   x =>
@@ -61,6 +60,13 @@ let student =
 
 let myStudent = student("Matt")(8);
 console.log(myStudent); // Name: Matt | Grade: 8
+
+// Functor
+let plus1 = (num) => {
+    return num + 1;
+}
+let numbers = [1, 2, 3];
+console.log(numbers.map(plus1));
 
 // Destructuring
 let foo = () => {
