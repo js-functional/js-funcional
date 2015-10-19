@@ -198,10 +198,10 @@ addFive(10);
 ```
 
 ### Sources
-[https://gist.github.com/mikaelbr/9900818]()
+[https://gist.github.com/mikaelbr/9900818](https://gist.github.com/mikaelbr/9900818)
 
-[https://www.gitbook.com/book/jcouyang/functional-javascript/details]()
+[https://www.gitbook.com/book/jcouyang/functional-javascript/details](https://www.gitbook.com/book/jcouyang/functional-javascript/details)
 
-[https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84]()
+[https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
 
 [http://functionaljavascript.blogspot.com.br/2013/07/functors.html](http://functionaljavascript.blogspot.com.br/2013/07/functors.html)
