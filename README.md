@@ -1,6 +1,14 @@
 ## JavaScript Functional Programming Cookbook (ES6)
 A Cookbook for writing FP in JavaScript using ES6
 
+### Summary
+
+* [Higher-order functions](#higher-order-functions)
+* [Recursion](#recursion)
+* [Functor](#functor)
+* [Destructuring](#destructuring)
+* [Currying](#currying)
+
 ### Higher-order functions
 Functions that operate on other functions, either by taking them as arguments or by returning them
 
