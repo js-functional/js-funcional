@@ -11,7 +11,7 @@ A Cookbook for writing FP in JavaScript using ES6
 * [Currying](#currying)
 
 ### Pure functions
-Returns the same result given same parameters. It's execution doesn't depend on the state of the system
+Returns the same result given same parameters. It's execution doesn't depend on the state of the system.
 
 1) Impure
 
@@ -19,7 +19,7 @@ Returns the same result given same parameters. It's execution doesn't depend on 
 let number = 1;
 let increment = () => {
     return number += 1;
-};
+}
 increment();
 // 2
 ```
@@ -29,13 +29,13 @@ increment();
 ```javascript
 let increment = (n) => {
     return n + 1;
-};
+}
 increment(1);
 // 2
 ```
 
 ### Higher-order functions
-Functions that operate on other functions, either by taking them as arguments or by returning them
+Functions that operate on other functions, either by taking them as arguments or by returning them.
 
 1) Sum
 
@@ -113,7 +113,7 @@ totalGrades
 ```
 
 ### Recursion
-Whenever a function calls itself, creating a loop
+Whenever a function calls itself, creating a loop.
 
 1) Countdown
 
@@ -166,7 +166,7 @@ numbers.map(plus1);
 ```
 
 ### Destructuring
-Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or "Pattern Matching"
+Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or "Pattern Matching".
 
 1) Select from pattern
 
@@ -203,7 +203,7 @@ ajax({ }, "additional", "data", "hello");
 ```
 
 ### Currying
-Taking a function that takes multiple arguments and turning it into a chain of functions each taking one argument and returning the next function, until the last returns the result
+Taking a function that takes multiple arguments and turning it into a chain of functions each taking one argument and returning the next function, until the last returns the result.
 
 1) Currying an Object
 
