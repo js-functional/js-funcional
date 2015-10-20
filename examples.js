@@ -61,8 +61,9 @@ let currySum =
     y =>
       x + y;
 
+let incr = currySum(1);
 let addFive = currySum(5);
-let adding = addFive(10);
+let adding = incr(10);
 console.log(adding); // 15
 
 let student =

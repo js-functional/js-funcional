@@ -220,12 +220,17 @@ student("Matt")(8);
 2) Currying a Sum
 
 ```javascript
-let currySum =
+let add =
     x =>
         y =>
             x + y;
 
-let addFive = currySum(5);
+let increment = add(1);
+let addFive = add(5);
+
+increment(3);
+//4
+
 addFive(10);
 // 15
 ```
