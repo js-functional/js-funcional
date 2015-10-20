@@ -3,11 +3,36 @@ A Cookbook for writing FP in JavaScript using ES6
 
 ### Summary
 
+* [Pure functions](#pure-functions)
 * [Higher-order functions](#higher-order-functions)
 * [Recursion](#recursion)
 * [Functor](#functor)
 * [Destructuring](#destructuring)
 * [Currying](#currying)
+
+### Pure functions
+Returns the same result given same parameters. It's execution doesn't depend on the state of the system
+
+1) Impure
+
+```javascript
+let number = 1;
+let increment = () => {
+    return number += 1;
+};
+increment();
+// 2
+```
+
+2) Pure
+
+```javascript
+let increment = (n) => {
+    return n + 1;
+};
+increment(1);
+// 2
+```
 
 ### Higher-order functions
 Functions that operate on other functions, either by taking them as arguments or by returning them
@@ -213,3 +238,7 @@ addFive(10);
 [https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
 
 [http://functionaljavascript.blogspot.com.br/2013/07/functors.html](http://functionaljavascript.blogspot.com.br/2013/07/functors.html)
+
+[http://nicoespeon.com/en/2015/01/pure-functions-javascript/](http://nicoespeon.com/en/2015/01/pure-functions-javascript/)
+
+[https://drboolean.gitbooks.io/mostly-adequate-guide/](https://drboolean.gitbooks.io/mostly-adequate-guide/)

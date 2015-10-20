@@ -1,3 +1,15 @@
+// pure fuctions
+var number = 1;
+var increment = function() {
+    return number += 1;
+};
+console.log(increment());
+
+var increment = function(n) {
+    return n + 1;
+};
+console.log(increment(1));
+
 // Sum
 let sum = (x, y) => {
   return x + y;
