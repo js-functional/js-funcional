@@ -41,11 +41,11 @@ Functions that operate on other functions, either by taking them as arguments or
 
 ```javascript
 let sum = (x, y) => {
-  return x + y;
+    return x + y;
 }
 
 let calculate = (fn, x, y) => {
-  return fn(x, y);
+    return fn(x, y);
 }
 
 calculate(sum, 1, 2);
@@ -56,9 +56,9 @@ calculate(sum, 1, 2);
 
 ```javascript
 let students = [
-  {name: 'Anna', grade: 6},
-  {name: 'John', grade: 4},
-  {name: 'Maria', grade: 9}
+    {name: 'Anna', grade: 6},
+    {name: 'John', grade: 4},
+    {name: 'Maria', grade: 9}
 ];
 
 let isApproved = (student) => {
@@ -84,9 +84,9 @@ students.map(byName);
 
 ```javascript
 let students = [
-  {name: 'Anna', grade: 6},
-  {name: 'John', grade: 4},
-  {name: 'Maria', grade: 9}
+    {name: 'Anna', grade: 6},
+    {name: 'John', grade: 4},
+    {name: 'Maria', grade: 9}
 ];
 
 let isApproved = (student) => {
@@ -105,7 +105,7 @@ students.filter(isApproved).map(byName));
 
 ```javascript
 let totalGrades = students.reduce((sum, student) => {
-  return sum + student.grade;
+    return sum + student.grade;
 }, 0);
 
 totalGrades
@@ -119,10 +119,10 @@ Whenever a function calls itself, creating a loop.
 
 ```javascript
 let countdown = (num) => {
-  if (num > 0) {
-    console.log(num);
-    countdown(num - 1);
-  }
+    if (num > 0) {
+        console.log(num);
+        countdown(num - 1);
+    }
 }
 
 countdown(5);
@@ -139,11 +139,11 @@ countdown(5);
 
 ```javascript
 let factorial = (num) => {
-  if (num <= 0) {
-    return 1;
-  } else {
-    return (num * factorial(num - 1));
-  }
+    if (num <= 0) {
+        return 1;
+    } else {
+        return (num * factorial(num - 1));
+    }
 }
 
 factorial(5);
@@ -172,7 +172,7 @@ Extract data from arrays or objects using a syntax that mirrors the construction
 
 ```javascript
 let foo = () => {
-  return [1, 2, 3];
+    return [1, 2, 3];
 };
 
 let [a, b] = foo();
@@ -192,7 +192,7 @@ console.log(a, b);
 
 ```javascript
 let ajax = function ({ url = "localhost", port: p = 80}, ...data) {
-  console.log("Url:", url, "Port:", p, "Rest:", data);
+    console.log("Url:", url, "Port:", p, "Rest:", data);
 };
 
 ajax({ url: "someHost" }, "additional", "data", "hello");
@@ -209,9 +209,9 @@ Taking a function that takes multiple arguments and turning it into a chain of f
 
 ```javascript
 let student =
-  name =>
-    grade =>
-      `Name: ${name} | Grade: ${grade}`;
+    name =>
+        grade =>
+            `Name: ${name} | Grade: ${grade}`;
 
 student("Matt")(8);
 // Name: Matt | Grade: 8
@@ -221,9 +221,9 @@ student("Matt")(8);
 
 ```javascript
 let currySum =
-  x =>
-    y =>
-      x + y;
+    x =>
+        y =>
+            x + y;
 
 let addFive = currySum(5);
 addFive(10);
