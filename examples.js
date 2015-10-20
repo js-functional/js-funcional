@@ -80,6 +80,21 @@ let plus1 = (num) => {
 let numbers = [1, 2, 3];
 console.log(numbers.map(plus1));
 
+// compose
+
+let compose = function(f,g) {
+  return function(x) {
+    return f(g(x));
+  };
+};
+
+let toUpperCase = function(x) { return x.toUpperCase(); };
+let exclaim = function(x) { return x + '!'; };
+let angry = compose(exclaim, (toUpperCase));
+
+console.log(angry("send in the clowns"));
+
+
 // Destructuring
 let foo = () => {
   return [1, 2, 3];

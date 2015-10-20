@@ -7,6 +7,7 @@ A Cookbook for writing FP in JavaScript using ES6
 * [Higher-order functions](#higher-order-functions)
 * [Recursion](#recursion)
 * [Functor](#functor)
+* [Compose](#compose)
 * [Destructuring](#destructuring)
 * [Currying](#currying)
 
@@ -165,6 +166,38 @@ numbers.map(plus1);
 // [2, 3, 4]
 ```
 
+### Compose
+The composition of two or more functions returns a new function.
+
+1) Combining two functions to generate another one
+
+```javascript
+let compose = (f,g) => x => f(g(x));
+
+let toUpperCase = function(x) { return x.toUpperCase(); };
+let exclaim = function(x) { return x + '!'; };
+
+let angry = compose(exclaim, toUpperCase);
+
+angry("stop this");
+// STOP THIS!
+```
+
+2) Combining three functions to generate another one
+
+```javascript
+let compose = (f,g) => x => f(g(x));
+
+let toUpperCase = function(x) { return x.toUpperCase(); };
+let exclaim = function(x) { return x + '!'; };
+let moreExclaim = function(x) { return x + '!!!!!'; };
+
+let reallyAngry = compose(exclaim, (toUpperCase, moreExclaim));
+
+reallyAngry("stop this");
+// STOP THIS!!!!!!
+```
+
 ### Destructuring
 Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or "Pattern Matching".
 
@@ -208,10 +241,7 @@ Taking a function that takes multiple arguments and turning it into a chain of f
 1) Currying an Object
 
 ```javascript
-let student =
-    name =>
-        grade =>
-            `Name: ${name} | Grade: ${grade}`;
+let student = name => grade => `Name: ${name} | Grade: ${grade}`;
 
 student("Matt")(8);
 // Name: Matt | Grade: 8
@@ -220,10 +250,7 @@ student("Matt")(8);
 2) Currying a Sum
 
 ```javascript
-let currySum =
-    x =>
-        y =>
-            x + y;
+let currySum = x => y => x + y;
 
 let addFive = currySum(5);
 addFive(10);
