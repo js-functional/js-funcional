@@ -98,7 +98,7 @@ let byName = (obj) => {
     return obj.name;
 }
 
-students.filter(isApproved).map(byName));
+students.filter(isApproved).map(byName);
 // ['Anna', 'Maria']
 ```
 
