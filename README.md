@@ -17,9 +17,9 @@ Returns the same result given same parameters. It's execution doesn't depend on 
 1) Impure
 
 ```javascript
-let number = 1;
+const number = 1;
 
-let increment = () => number += 1;
+const increment = () => number += 1;
 
 increment();
 // 2
@@ -28,7 +28,7 @@ increment();
 2) Pure
 
 ```javascript
-let increment = n => n + 1;
+const increment = n => n + 1;
 
 increment(1);
 // 2
@@ -40,9 +40,9 @@ Functions that operate on other functions, either by taking them as arguments or
 1) Sum
 
 ```javascript
-let sum = (x, y) => x + y;
+const sum = (x, y) => x + y;
 
-let calculate = (fn, x, y) => fn(x, y);
+const calculate = (fn, x, y) => fn(x, y);
 
 calculate(sum, 1, 2);
 // 3
@@ -51,13 +51,13 @@ calculate(sum, 1, 2);
 2) Filter
 
 ```javascript
-let students = [
+const students = [
     {name: 'Anna', grade: 6},
     {name: 'John', grade: 4},
     {name: 'Maria', grade: 9}
 ];
 
-let isApproved = student => student.grade >= 6;
+const isApproved = student => student.grade >= 6;
 
 students.filter(isApproved);
 // [ { name: 'Anna', grade: 6 }, { name: 'Maria', grade: 9 } ]
@@ -66,7 +66,7 @@ students.filter(isApproved);
 3) Map
 
 ```javascript
-let byName = obj => obj.name;
+const byName = obj => obj.name;
 
 students.map(byName);
 // [ 'Anna', 'John', 'Maria' ]
@@ -75,15 +75,15 @@ students.map(byName);
 4) Chaining
 
 ```javascript
-let students = [
+const students = [
     {name: 'Anna', grade: 6},
     {name: 'John', grade: 4},
     {name: 'Maria', grade: 9}
 ];
 
-let isApproved = student => student.grade >= 6;
+const isApproved = student => student.grade >= 6;
 
-let byName = obj => obj.name;
+const byName = obj => obj.name;
 
 students.filter(isApproved).map(byName);
 // ['Anna', 'Maria']
@@ -92,7 +92,7 @@ students.filter(isApproved).map(byName);
 5) Reduce
 
 ```javascript
-let totalGrades = students.reduce((sum, student) => sum + student.grade, 0);
+const totalGrades = students.reduce((sum, student) => sum + student.grade, 0);
 
 totalGrades
 // 19
@@ -104,7 +104,7 @@ Whenever a function calls itself, creating a loop.
 1) Countdown
 
 ```javascript
-let countdown = num => {
+const countdown = num => {
     if (num > 0) {
         console.log(num);
         countdown(num - 1);
@@ -124,7 +124,7 @@ countdown(5);
 2) Factorial
 
 ```javascript
-let factorial = num => {
+const factorial = num => {
     if (num <= 0) {
         return 1;
     } else {
@@ -142,9 +142,9 @@ Given a value and a function, unwraps the values to get to its inner value(s), c
 1) Adding a value to all the elements in a array
 
 ```javascript
-let plus1 = num => num + 1;
+const plus1 = num => num + 1;
 
-let numbers = [1, 2, 3];
+const numbers = [1, 2, 3];
 numbers.map(plus1);
 // [2, 3, 4]
 ```
@@ -155,12 +155,12 @@ The composition of two or more functions returns a new function.
 1) Combining two functions to generate another one
 
 ```javascript
-let compose = (f,g) => x => f(g(x));
+const compose = (f,g) => x => f(g(x));
 
-let toUpperCase = function(x) { return x.toUpperCase(); };
-let exclaim = function(x) { return x + '!'; };
+const toUpperCase = function(x) { return x.toUpperCase(); };
+const exclaim = function(x) { return x + '!'; };
 
-let angry = compose(exclaim, toUpperCase);
+const angry = compose(exclaim, toUpperCase);
 
 angry("stop this");
 // STOP THIS!
@@ -169,13 +169,13 @@ angry("stop this");
 2) Combining three functions to generate another one
 
 ```javascript
-let compose = (f,g) => x => f(g(x));
+const compose = (f,g) => x => f(g(x));
 
-let toUpperCase = function(x) { return x.toUpperCase(); };
-let exclaim = function(x) { return x + '!'; };
-let moreExclaim = function(x) { return x + '!!!!!'; };
+const toUpperCase = function(x) { return x.toUpperCase(); };
+const exclaim = function(x) { return x + '!'; };
+const moreExclaim = function(x) { return x + '!!!!!'; };
 
-let reallyAngry = compose(exclaim, (toUpperCase, moreExclaim));
+const reallyAngry = compose(exclaim, (toUpperCase, moreExclaim));
 
 reallyAngry("stop this");
 // STOP THIS!!!!!!
@@ -187,9 +187,9 @@ Extract data from arrays or objects using a syntax that mirrors the construction
 1) Select from pattern
 
 ```javascript
-let foo = () => [1, 2, 3];
+const foo = () => [1, 2, 3];
 
-let [a, b] = foo();
+const [a, b] = foo();
 console.log(a, b);
 // 1 2
 ```
@@ -197,7 +197,7 @@ console.log(a, b);
 2) Accumulates the rest values
 
 ```javascript
-let [a, ...b] = [1, 2, 3];
+const [a, ...b] = [1, 2, 3];
 console.log(a, b);
 // 1 [2, 3]
 ```
@@ -205,7 +205,7 @@ console.log(a, b);
 3) Optional parameters
 
 ```javascript
-let ajax = function ({ url = "localhost", port: p = 80}, ...data) {
+const ajax = function ({ url = "localhost", port: p = 80}, ...data) {
     console.log("Url:", url, "Port:", p, "Rest:", data);
 };
 
@@ -222,7 +222,7 @@ Taking a function that takes multiple arguments and turning it into a chain of f
 1) Currying an Object
 
 ```javascript
-let student = name => grade => `Name: ${name} | Grade: ${grade}`;
+const student = name => grade => `Name: ${name} | Grade: ${grade}`;
 
 student("Matt")(8);
 // Name: Matt | Grade: 8
@@ -231,10 +231,10 @@ student("Matt")(8);
 2) Currying a Sum
 
 ```javascript
-let add = x => y => x + y;
+const add = x => y => x + y;
 
-let increment = add(1);
-let addFive = add(5);
+const increment = add(1);
+const addFive = add(5);
 
 increment(3);
 //4
