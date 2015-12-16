@@ -18,9 +18,9 @@ Returns the same result given same parameters. It's execution doesn't depend on 
 
 ```javascript
 let number = 1;
-let increment = () => {
-    return number += 1;
-}
+
+let increment = () => number += 1;
+
 increment();
 // 2
 ```
@@ -28,9 +28,8 @@ increment();
 2) Pure
 
 ```javascript
-let increment = (n) => {
-    return n + 1;
-}
+let increment = n => n + 1;
+
 increment(1);
 // 2
 ```
@@ -41,13 +40,9 @@ Functions that operate on other functions, either by taking them as arguments or
 1) Sum
 
 ```javascript
-let sum = (x, y) => {
-    return x + y;
-}
+let sum = (x, y) => x + y;
 
-let calculate = (fn, x, y) => {
-    return fn(x, y);
-}
+let calculate = (fn, x, y) => fn(x, y);
 
 calculate(sum, 1, 2);
 // 3
@@ -62,9 +57,7 @@ let students = [
     {name: 'Maria', grade: 9}
 ];
 
-let isApproved = (student) => {
-    return student.grade >= 6;
-}
+let isApproved = student => student.grade >= 6;
 
 students.filter(isApproved);
 // [ { name: 'Anna', grade: 6 }, { name: 'Maria', grade: 9 } ]
@@ -73,9 +66,7 @@ students.filter(isApproved);
 3) Map
 
 ```javascript
-let byName = (obj) => {
-    return obj.name;
-}
+let byName = obj => obj.name;
 
 students.map(byName);
 // [ 'Anna', 'John', 'Maria' ]
@@ -90,13 +81,9 @@ let students = [
     {name: 'Maria', grade: 9}
 ];
 
-let isApproved = (student) => {
-    return student.grade >= 6;
-}
+let isApproved = student => student.grade >= 6;
 
-let byName = (obj) => {
-    return obj.name;
-}
+let byName = obj => obj.name;
 
 students.filter(isApproved).map(byName);
 // ['Anna', 'Maria']
@@ -105,9 +92,7 @@ students.filter(isApproved).map(byName);
 5) Reduce
 
 ```javascript
-let totalGrades = students.reduce((sum, student) => {
-    return sum + student.grade;
-}, 0);
+let totalGrades = students.reduce((sum, student) => sum + student.grade, 0);
 
 totalGrades
 // 19
@@ -119,7 +104,7 @@ Whenever a function calls itself, creating a loop.
 1) Countdown
 
 ```javascript
-let countdown = (num) => {
+let countdown = num => {
     if (num > 0) {
         console.log(num);
         countdown(num - 1);
@@ -139,7 +124,7 @@ countdown(5);
 2) Factorial
 
 ```javascript
-let factorial = (num) => {
+let factorial = num => {
     if (num <= 0) {
         return 1;
     } else {
@@ -157,9 +142,7 @@ Given a value and a function, unwraps the values to get to its inner value(s), c
 1) Adding a value to all the elements in a array
 
 ```javascript
-let plus1 = (num) => {
-    return num + 1;
-}
+let plus1 = num => num + 1;
 
 let numbers = [1, 2, 3];
 numbers.map(plus1);
@@ -204,9 +187,7 @@ Extract data from arrays or objects using a syntax that mirrors the construction
 1) Select from pattern
 
 ```javascript
-let foo = () => {
-    return [1, 2, 3];
-};
+let foo = () => [1, 2, 3];
 
 let [a, b] = foo();
 console.log(a, b);
