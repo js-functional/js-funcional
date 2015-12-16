@@ -17,7 +17,7 @@ Returns the same result given same parameters. It's execution doesn't depend on 
 1) Impure
 
 ```javascript
-let number = 1;
+const number = 1;
 
 const increment = () => number += 1;
 
