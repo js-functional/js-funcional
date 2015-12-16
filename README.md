@@ -28,7 +28,7 @@ increment();
 2) Pure
 
 ```javascript
-let increment = (n) => n + 1;
+let increment = n => n + 1;
 
 increment(1);
 // 2
@@ -57,7 +57,7 @@ let students = [
     {name: 'Maria', grade: 9}
 ];
 
-let isApproved = (student) => student.grade >= 6;
+let isApproved = student => student.grade >= 6;
 
 students.filter(isApproved);
 // [ { name: 'Anna', grade: 6 }, { name: 'Maria', grade: 9 } ]
@@ -66,7 +66,7 @@ students.filter(isApproved);
 3) Map
 
 ```javascript
-let byName = (obj) => obj.name;
+let byName = obj => obj.name;
 
 students.map(byName);
 // [ 'Anna', 'John', 'Maria' ]
@@ -81,9 +81,9 @@ let students = [
     {name: 'Maria', grade: 9}
 ];
 
-let isApproved = (student) => student.grade >= 6;
+let isApproved = student => student.grade >= 6;
 
-let byName = (obj) => obj.name;
+let byName = obj => obj.name;
 
 students.filter(isApproved).map(byName);
 // ['Anna', 'Maria']
@@ -104,7 +104,7 @@ Whenever a function calls itself, creating a loop.
 1) Countdown
 
 ```javascript
-let countdown = (num) => {
+let countdown = num => {
     if (num > 0) {
         console.log(num);
         countdown(num - 1);
@@ -124,7 +124,7 @@ countdown(5);
 2) Factorial
 
 ```javascript
-let factorial = (num) => {
+let factorial = num => {
     if (num <= 0) {
         return 1;
     } else {
@@ -142,7 +142,7 @@ Given a value and a function, unwraps the values to get to its inner value(s), c
 1) Adding a value to all the elements in a array
 
 ```javascript
-let plus1 = (num) => num + 1;
+let plus1 = num => num + 1;
 
 let numbers = [1, 2, 3];
 numbers.map(plus1);
