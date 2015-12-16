@@ -17,7 +17,7 @@ Returns the same result given same parameters. It's execution doesn't depend on 
 1) Impure
 
 ```javascript
-const number = 1;
+let number = 1;
 
 const increment = () => number += 1;
 
@@ -51,7 +51,7 @@ calculate(sum, 1, 2);
 2) Filter
 
 ```javascript
-const students = [
+let students = [
     {name: 'Anna', grade: 6},
     {name: 'John', grade: 4},
     {name: 'Maria', grade: 9}
@@ -75,7 +75,7 @@ students.map(byName);
 4) Chaining
 
 ```javascript
-const students = [
+let students = [
     {name: 'Anna', grade: 6},
     {name: 'John', grade: 4},
     {name: 'Maria', grade: 9}
@@ -144,7 +144,7 @@ Given a value and a function, unwraps the values to get to its inner value(s), c
 ```javascript
 const plus1 = num => num + 1;
 
-const numbers = [1, 2, 3];
+let numbers = [1, 2, 3];
 numbers.map(plus1);
 // [2, 3, 4]
 ```
