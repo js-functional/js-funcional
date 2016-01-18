@@ -175,7 +175,7 @@ const toUpperCase = function(x) { return x.toUpperCase(); };
 const exclaim = function(x) { return x + '!'; };
 const moreExclaim = function(x) { return x + '!!!!!'; };
 
-const reallyAngry = compose(exclaim, (toUpperCase, moreExclaim));
+const reallyAngry = compose(exclaim, compose(toUpperCase, moreExclaim));
 
 reallyAngry("stop this");
 // STOP THIS!!!!!!
