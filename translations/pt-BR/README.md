@@ -1,24 +1,20 @@
-## JavaScript Functional Programming Cookbook (ES6)
-A Cookbook for writing FP in JavaScript using ES6
+## Livro de receitas - Programação Funcional em JavaScript (ES6)
+Um livro de receitas para escrever _programação funcional_ no JavaScript com ES6.
 
-**Translations**
+### Índice
 
-- [Português (Brasil)](/translations/pt-BR/README.md)
+* [Funções puras](#funções-puras)
+* [O que são "Higher-order functions"](#o-que-são-higher-order-functions)
+* [Recursão](#recursão)
+* [O que são "Functors"](#o-que-são-functors)
+* [Compondo funções](#compondo-funções)
+* [Usando desestruturação de parâmetros](#usando-desestruturação-de-parâmetros)
+* [O que é "Currying"](#o-que-é-currying)
 
-### Summary
+### Funções puras
+Retorna o mesmo valor se passado os mesmos parâmetros. Sua execução não depende do estado do sistema.
 
-* [Pure functions](#pure-functions)
-* [Higher-order functions](#higher-order-functions)
-* [Recursion](#recursion)
-* [Functor](#functor)
-* [Compose](#compose)
-* [Destructuring](#destructuring)
-* [Currying](#currying)
-
-### Pure functions
-Returns the same result given same parameters. It's execution doesn't depend on the state of the system.
-
-1) Impure
+1) Função impura
 
 ```javascript
 let number = 1;
@@ -29,7 +25,7 @@ increment();
 // 2
 ```
 
-2) Pure
+2) Função pura
 
 ```javascript
 const increment = n => n + 1;
@@ -38,10 +34,10 @@ increment(1);
 // 2
 ```
 
-### Higher-order functions
-Functions that operate on other functions, either by taking them as arguments or by returning them.
+### O que são "Higher-order functions"
+São funções que operam em outras funções, seja por receber elas como argumentos ou retornando-a como valor.
 
-1) Sum
+1) Função de soma
 
 ```javascript
 const sum = (x, y) => x + y;
@@ -52,7 +48,7 @@ calculate(sum, 1, 2);
 // 3
 ```
 
-2) Filter
+2) Filtrando elementos
 
 ```javascript
 let students = [
@@ -76,7 +72,7 @@ students.map(byName);
 // [ 'Anna', 'John', 'Maria' ]
 ```
 
-4) Chaining
+4) Encadeando funções
 
 ```javascript
 let students = [
@@ -93,7 +89,7 @@ students.filter(isApproved).map(byName);
 // ['Anna', 'Maria']
 ```
 
-5) Reduce
+5) Usando _reduce_
 
 ```javascript
 const totalGrades = students.reduce((sum, student) => sum + student.grade, 0);
@@ -102,10 +98,10 @@ totalGrades
 // 19
 ```
 
-### Recursion
-Whenever a function calls itself, creating a loop.
+### Recursão
+Sempre que uma função chama a si mesmo, criando um loop.
 
-1) Countdown
+1) Função de contagem regressiva
 
 ```javascript
 const countdown = num => {
@@ -125,7 +121,7 @@ countdown(5);
 */
 ```
 
-2) Factorial
+2) Calculando uma fatorial
 
 ```javascript
 const factorial = num => {
@@ -140,10 +136,10 @@ factorial(5);
 //120
 ```
 
-### Functor
-An object that has a map method. The map method of the functor takes it’s own contents and transforms each of them using the transformation callback passed to map, and returns a new functor, which contains the structure as the first functor, but with the transformed values.
+### O que são "Functors"
+É um objeto que implementa o método _map_. O método _map_ do _functor_ retorna seu próprio conteúdo e, para cada um deles, processa a transformação passada como _callback_ para o método _map_ e retorna um novo _functor_, que contém a estrutura do primeiro _functor_, porém, com seu conteúdo transformado.
 
-1) Adding a value to all the elements in a array
+1) Adicionando um valor a todos os elementos em um array
 
 ```javascript
 const plus1 = num => num + 1;
@@ -153,10 +149,10 @@ numbers.map(plus1);
 // [2, 3, 4]
 ```
 
-### Compose
-The composition of two or more functions returns a new function.
+### Compondo funções
+A composição de duas ou mais funções retornando uma nova função.
 
-1) Combining two functions to generate another one
+1) Combinando duas funções para gerar uma nova
 
 ```javascript
 const compose = (f,g) => x => f(g(x));
@@ -170,7 +166,7 @@ angry("stop this");
 // STOP THIS!
 ```
 
-2) Combining three functions to generate another one
+2) Combinando três funções para gerar uma nova
 
 ```javascript
 const compose = (f,g) => x => f(g(x));
@@ -185,10 +181,10 @@ reallyAngry("stop this");
 // STOP THIS!!!!!!
 ```
 
-### Destructuring
-Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or "Pattern Matching".
+### Usando desestruturação de parâmetros
+Extrair dados de arrays ou objetos usando uma sintaxe que espelha a estrutura literal do array ou objeto. Conhecida também como _"Pattern Matching"_ (em português, algo como, **correspondendo ao mesmo padrão**).
 
-1) Select from pattern
+1) Selecionando a partir de um padrão
 
 ```javascript
 const foo = () => [1, 2, 3];
@@ -198,7 +194,7 @@ console.log(a, b);
 // 1 2
 ```
 
-2) Accumulates the rest values
+2) Acumula os valores de restantes
 
 ```javascript
 const [a, ...b] = [1, 2, 3];
@@ -206,7 +202,7 @@ console.log(a, b);
 // 1 [2, 3]
 ```
 
-3) Optional parameters
+3) Parâmetros opcionais
 
 ```javascript
 const ajax = function ({ url = "localhost", port: p = 80}, ...data) {
@@ -220,10 +216,10 @@ ajax({ }, "additional", "data", "hello");
 // Url: localhost Port: 80 Rest: [ 'additional', 'data', 'hello' ]
 ```
 
-### Currying
-Taking a function that takes multiple arguments and turning it into a chain of functions each taking one argument and returning the next function, until the last returns the result.
+### O que é "Currying"
+Recebe uma função que recebe múltiplos argumentos e transforma isso em um encadeamento de funções, passando um argumento de cada vez e retornando a próxima função, até que a última retorne o resultado.
 
-1) Currying an Object
+1) Utilizando _currying_ em um objeto
 
 ```javascript
 const student = name => grade => `Name: ${name} | Grade: ${grade}`;
@@ -232,7 +228,7 @@ student("Matt")(8);
 // Name: Matt | Grade: 8
 ```
 
-2) Currying a Sum
+2) Utilizando _currying_ em uma função de soma
 
 ```javascript
 const add = x => y => x + y;
@@ -247,7 +243,10 @@ addFive(10);
 // 15
 ```
 
-### Sources
+### Artigos relacionados
+
+**OBS:** Todos em inglês.
+
 [https://gist.github.com/mikaelbr/9900818](https://gist.github.com/mikaelbr/9900818)
 
 [https://www.gitbook.com/book/jcouyang/functional-javascript/details](https://www.gitbook.com/book/jcouyang/functional-javascript/details)
