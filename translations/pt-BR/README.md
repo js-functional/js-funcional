@@ -3,10 +3,10 @@ Um livro de receitas para escrever _programação funcional_ no JavaScript com E
 
 ### Índice
 
-* [Funções puras](#funções-)
+* [Funções puras](#funções-puras)
 * [O que são "Higher-order functions"](#o-que-são-higher-order-functions)
 * [Recursão](#recursão)
-* [O que são "Functors"](#functor)
+* [O que são "Functors"](#o-que-são-functors)
 * [Compondo funções](#compondo-funções)
 * [Usando desestruturação de parâmetros](#usando-desestruturação-de-parâmetros)
 * [O que é "Currying"](#o-que-é-currying)
