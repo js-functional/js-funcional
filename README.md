@@ -1,6 +1,10 @@
 ## JavaScript Functional Programming Cookbook (ES6)
 A Cookbook for writing FP in JavaScript using ES6
 
+**Translations**
+
+- [Português (Brasil)](/translations/pt-BR/README.md)
+
 ### Summary
 
 * [Pure functions](#pure-functions)
