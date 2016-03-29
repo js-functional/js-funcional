@@ -157,8 +157,8 @@ A composição de duas ou mais funções retornando uma nova função.
 ```javascript
 const compose = (f,g) => x => f(g(x));
 
-const toUpperCase = function(x) { return x.toUpperCase(); };
-const exclaim = function(x) { return x + '!'; };
+const toUpperCase = x => x.toUpperCase();
+const exclaim = x => x + '!';
 
 const angry = compose(exclaim, toUpperCase);
 
@@ -171,9 +171,9 @@ angry("stop this");
 ```javascript
 const compose = (f,g) => x => f(g(x));
 
-const toUpperCase = function(x) { return x.toUpperCase(); };
-const exclaim = function(x) { return x + '!'; };
-const moreExclaim = function(x) { return x + '!!!!!'; };
+const toUpperCase = x => x.toUpperCase();
+const exclaim = x => x + '!';
+const moreExclaim = x => x + '!!!!!';
 
 const reallyAngry = compose(exclaim, compose(toUpperCase, moreExclaim));
 
@@ -205,9 +205,8 @@ console.log(a, b);
 3) Parâmetros opcionais
 
 ```javascript
-const ajax = function ({ url = "localhost", port: p = 80}, ...data) {
+const ajax = ({ url = "localhost", port: p = 80}, ...data)  =>
     console.log("Url:", url, "Port:", p, "Rest:", data);
-};
 
 ajax({ url: "someHost" }, "additional", "data", "hello");
 // Url: someHost Port: 80 Rest: [ 'additional', 'data', 'hello' ]
