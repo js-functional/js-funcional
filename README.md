@@ -4,6 +4,7 @@ A Cookbook for writing FP in JavaScript using ES6
 **Translations**
 
 - [Português (Brasil)](/translations/pt-BR/README.md)
+- [简体中文](/translations/zh-CN/README.md)
 
 ### Summary
 
@@ -260,3 +261,5 @@ addFive(10);
 [https://drboolean.gitbooks.io/mostly-adequate-guide/](https://drboolean.gitbooks.io/mostly-adequate-guide/)
 
 [https://www.youtube.com/watch?v=DisD9ftUyCk](https://www.youtube.com/watch?v=DisD9ftUyCk)
+
+
