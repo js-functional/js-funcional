@@ -143,9 +143,9 @@ factorial(5);
 ```
 
 ### Functor
-An object that has a map method. The map method of the functor takes it’s own contents and transforms each of them using the transformation callback passed to map, and returns a new functor, which contains the structure as the first functor, but with the transformed values.
+有 map 方法的对象。functor 的 map 方法通过 map 回调函数调用自己的内容，然后返回一个新的 functor.
 
-1) Adding a value to all the elements in a array
+1) 给数组所有的元素添加一个值
 
 ```javascript
 const plus1 = num => num + 1;
@@ -189,7 +189,8 @@ reallyAngry("stop this");
 ```
 
 ### 解构
-Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or "Pattern Matching".
+
+从数组中提取数据或对象使用一种语法混合数组和对象文本的建设。或“模式匹配”。
 
 1) Select from pattern
 
@@ -201,7 +202,7 @@ console.log(a, b);
 // 1 2
 ```
 
-2) Accumulates the rest values
+2) 接收 rest 值
 
 ```javascript
 const [a, ...b] = [1, 2, 3];
@@ -209,7 +210,7 @@ console.log(a, b);
 // 1 [2, 3]
 ```
 
-3) Optional parameters
+3) 可选参数
 
 ```javascript
 const ajax = ({ url = "localhost", port: p = 80}, ...data)  =>
@@ -223,9 +224,11 @@ ajax({ }, "additional", "data", "hello");
 ```
 
 ### 柯里化
-Taking a function that takes multiple arguments and turning it into a chain of functions each taking one argument and returning the next function, until the last returns the result.
 
-1) Currying an Object
+一个函数有多个参数,把每个参数通过链式的形式返回下一个函数,直到最后返回结果。
+
+
+1) 对象柯里化
 
 ```javascript
 const student = name => grade => `Name: ${name} | Grade: ${grade}`;
@@ -234,7 +237,7 @@ student("Matt")(8);
 // Name: Matt | Grade: 8
 ```
 
-2) Currying a Sum
+2) 加法函数柯里化
 
 ```javascript
 const add = x => y => x + y;
