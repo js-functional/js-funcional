@@ -1,12 +1,12 @@
-## JavaScript Functional Programming Cookbook (ES6)
-A Cookbook for writing FP in JavaScript using ES6
+## JavaScript 函数式编程手册 (ES6)
+一份用 ES6 写的 JavaScript 函数式编程手册
 
 **Translations**
 
 - [Português (Brasil)](/translations/pt-BR/README.md)
-- [简体中文](/translations/zh-CN/README.md)
+- [简体中文版](/translations/zh-CN/README.md)
 
-### Summary
+### 概要
 
 * [Pure functions](#pure-functions)
 * [Higher-order functions](#higher-order-functions)
@@ -16,10 +16,10 @@ A Cookbook for writing FP in JavaScript using ES6
 * [Destructuring](#destructuring)
 * [Currying](#currying)
 
-### Pure functions
+### 纯函数式
 Returns the same result given same parameters. It's execution doesn't depend on the state of the system.
 
-1) Impure
+1) 非纯函数式
 
 ```javascript
 let number = 1;
@@ -30,7 +30,7 @@ increment();
 // 2
 ```
 
-2) Pure
+2) 纯函数式
 
 ```javascript
 const increment = n => n + 1;
@@ -39,10 +39,10 @@ increment(1);
 // 2
 ```
 
-### Higher-order functions
+### 高阶函数
 Functions that operate on other functions, either by taking them as arguments or by returning them.
 
-1) Sum
+1) 加法
 
 ```javascript
 const sum = (x, y) => x + y;
@@ -53,7 +53,7 @@ calculate(sum, 1, 2);
 // 3
 ```
 
-2) Filter
+2) filter
 
 ```javascript
 let students = [
@@ -77,7 +77,7 @@ students.map(byName);
 // [ 'Anna', 'John', 'Maria' ]
 ```
 
-4) Chaining
+4) 链式
 
 ```javascript
 let students = [
@@ -103,10 +103,11 @@ totalGrades
 // 19
 ```
 
-### Recursion
-Whenever a function calls itself, creating a loop.
+### 递归
 
-1) Countdown
+当一个函数调用它自己的时候，就创造了一个循环
+
+1) 递减
 
 ```javascript
 const countdown = num => {
@@ -126,7 +127,7 @@ countdown(5);
 */
 ```
 
-2) Factorial
+2) 阶乘
 
 ```javascript
 const factorial = num => {
@@ -142,9 +143,9 @@ factorial(5);
 ```
 
 ### Functor
-An object that has a map method. The map method of the functor takes it’s own contents and transforms each of them using the transformation callback passed to map, and returns a new functor, which contains the structure as the first functor, but with the transformed values.
+有 map 方法的对象。functor 的 map 方法通过 map 回调函数调用自己的内容，然后返回一个新的 functor.
 
-1) Adding a value to all the elements in a array
+1) 给数组所有的元素添加一个值
 
 ```javascript
 const plus1 = num => num + 1;
@@ -154,10 +155,11 @@ numbers.map(plus1);
 // [2, 3, 4]
 ```
 
-### Compose
-The composition of two or more functions returns a new function.
+### 组合
 
-1) Combining two functions to generate another one
+通过组合两个或更多的函数生成一个新的函数
+
+1) 组合两个函数生成一个新的函数
 
 ```javascript
 const compose = (f,g) => x => f(g(x));
@@ -171,7 +173,7 @@ angry("stop this");
 // STOP THIS!
 ```
 
-2) Combining three functions to generate another one
+2) 组合三个函数生成一个新的
 
 ```javascript
 const compose = (f,g) => x => f(g(x));
@@ -186,8 +188,9 @@ reallyAngry("stop this");
 // STOP THIS!!!!!!
 ```
 
-### Destructuring
-Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or "Pattern Matching".
+### 解构
+
+从数组中提取数据或对象使用一种语法混合数组和对象文本的建设。或“模式匹配”。
 
 1) Select from pattern
 
@@ -199,7 +202,7 @@ console.log(a, b);
 // 1 2
 ```
 
-2) Accumulates the rest values
+2) 接收 rest 值
 
 ```javascript
 const [a, ...b] = [1, 2, 3];
@@ -207,7 +210,7 @@ console.log(a, b);
 // 1 [2, 3]
 ```
 
-3) Optional parameters
+3) 可选参数
 
 ```javascript
 const ajax = ({ url = "localhost", port: p = 80}, ...data)  =>
@@ -220,10 +223,12 @@ ajax({ }, "additional", "data", "hello");
 // Url: localhost Port: 80 Rest: [ 'additional', 'data', 'hello' ]
 ```
 
-### Currying
-Taking a function that takes multiple arguments and turning it into a chain of functions each taking one argument and returning the next function, until the last returns the result.
+### 柯里化
 
-1) Currying an Object
+一个函数有多个参数,把每个参数通过链式的形式返回下一个函数,直到最后返回结果。
+
+
+1) 对象柯里化
 
 ```javascript
 const student = name => grade => `Name: ${name} | Grade: ${grade}`;
@@ -232,7 +237,7 @@ student("Matt")(8);
 // Name: Matt | Grade: 8
 ```
 
-2) Currying a Sum
+2) 加法函数柯里化
 
 ```javascript
 const add = x => y => x + y;
@@ -247,7 +252,7 @@ addFive(10);
 // 15
 ```
 
-### Sources
+### 参考资源
 [https://gist.github.com/mikaelbr/9900818](https://gist.github.com/mikaelbr/9900818)
 
 [https://www.gitbook.com/book/jcouyang/functional-javascript/details](https://www.gitbook.com/book/jcouyang/functional-javascript/details)
@@ -261,5 +266,3 @@ addFive(10);
 [https://drboolean.gitbooks.io/mostly-adequate-guide/](https://drboolean.gitbooks.io/mostly-adequate-guide/)
 
 [https://www.youtube.com/watch?v=DisD9ftUyCk](https://www.youtube.com/watch?v=DisD9ftUyCk)
-
-
