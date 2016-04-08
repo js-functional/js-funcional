@@ -8,18 +8,19 @@
 
 ### 概要
 
-* [Pure functions](#pure-functions)
-* [Higher-order functions](#higher-order-functions)
-* [Recursion](#recursion)
+* [Pure functions](#纯函数式)
+* [Higher-order functions](#高阶函数)
+* [Recursion](#递归)
 * [Functor](#functor)
-* [Compose](#compose)
-* [Destructuring](#destructuring)
-* [Currying](#currying)
+* [Compose](#组合)
+* [Destructuring](#解构)
+* [Currying](#柯里化)
 
 ### 纯函数式
-Returns the same result given same parameters. It's execution doesn't depend on the state of the system.
 
-1) 非纯函数式
+相同的参数返回相同的结果，它的执行不依赖于系统的状态
+
+1) 非纯净的
 
 ```javascript
 let number = 1;
@@ -30,7 +31,7 @@ increment();
 // 2
 ```
 
-2) 纯函数式
+2) 纯净的
 
 ```javascript
 const increment = n => n + 1;
@@ -40,8 +41,7 @@ increment(1);
 ```
 
 ### 高阶函数
-Functions that operate on other functions, either by taking them as arguments or by returning them.
-
+函数把其他函数当做参数传递使用或者返回一个函数
 1) 加法
 
 ```javascript
