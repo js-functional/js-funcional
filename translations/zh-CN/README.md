@@ -8,17 +8,18 @@
 
 ### 概要
 
-* [Pure functions](#pure-functions)
-* [Higher-order functions](#higher-order-functions)
-* [Recursion](#recursion)
+* [Pure functions](#纯函数式)
+* [Higher-order functions](#高阶函数)
+* [Recursion](#递归)
 * [Functor](#functor)
-* [Compose](#compose)
-* [Destructuring](#destructuring)
-* [Currying](#currying)
+* [Compose](#组合)
+* [Destructuring](#解构)
+* [Currying](#柯里化)
 
 ### 纯函数式
 
 相同的参数返回相同的结果，它的执行不依赖于系统的状态
+
 1) 非纯净的
 
 ```javascript
