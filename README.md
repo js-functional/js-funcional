@@ -110,12 +110,13 @@ Whenever a function calls itself, creating a loop.
 
 ```javascript
 
-const count = num => {
+const countdown = num => {
   console.log(num)
   num < 1
   ? num
-  : count(num - 1)
+  : countdown(num - 1)
 }
+
 countdown(5);
 /*
 5
@@ -134,7 +135,6 @@ const factorial = (num) =>
   num <= 0
   ? 1
   : n * factorial(num - 1)
-}
 
 factorial(5);
 //120
