@@ -119,10 +119,10 @@ ajax({ }, "additional", "data", "hello");
 
 // Recursion
 let countdown = (num) => {
-  if (num > 0) {
     console.log(num);
-    countdown(num - 1);
-  }
+    num < 1
+    ? num
+    : countdown(num -1);
 }
 
 let counting = countdown(5);
@@ -134,12 +134,10 @@ let counting = countdown(5);
 1
 */
 
-let factorial = (num) => {
-  if (num <= 0) {
-    return 1;
-  } else {
-    return (num * factorial(num - 1));
-  }
-};
+let factorial = (num) =>
+  num <= 0
+  ? 1
+  : n * factorial(num - 1);
+
 console.log(factorial(5));
 //120
