@@ -247,18 +247,18 @@ addFive(10);
 ```
 
 ### Sources
-[https://gist.github.com/mikaelbr/9900818](https://gist.github.com/mikaelbr/9900818)
+- [Gist: Usages for ES6 destructuring](https://gist.github.com/mikaelbr/9900818)
 
-[https://www.gitbook.com/book/jcouyang/functional-javascript/details](https://www.gitbook.com/book/jcouyang/functional-javascript/details)
+- [Functional JavaScript Mini Book by Jichao Ouyang](https://jcouyang.gitbooks.io/functional-javascript/content/en/index.html)
 
-[https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
+- [Functional Programming in JavaScript series by mpj](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
 
-[http://functionaljavascript.blogspot.com.br/2013/07/functors.html](http://functionaljavascript.blogspot.com.br/2013/07/functors.html)
+- [Functors in Javascript](http://functionaljavascript.blogspot.com.br/2013/07/functors.html)
 
-[http://nicoespeon.com/en/2015/01/pure-functions-javascript/](http://nicoespeon.com/en/2015/01/pure-functions-javascript/)
+- [Pure functions in Javascript](http://nicoespeon.com/en/2015/01/pure-functions-javascript/)
 
-[https://drboolean.gitbooks.io/mostly-adequate-guide/](https://drboolean.gitbooks.io/mostly-adequate-guide/)
+- [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/)
 
-[https://www.youtube.com/watch?v=DisD9ftUyCk](https://www.youtube.com/watch?v=DisD9ftUyCk)
+- [Functors by mpj](https://www.youtube.com/watch?v=DisD9ftUyCk)
 
-
+- [Concepts of Functional Programming in Javascript](https://medium.com/the-renaissance-developer/concepts-of-functional-programming-in-javascript-6bc84220d2aa)
